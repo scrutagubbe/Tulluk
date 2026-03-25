@@ -46420,7 +46420,7 @@ a.u-link.u-text-hover-color-var:hover {
         
         
         
-        --theme-sheet-width-xl: 1140px;
+        --theme-sheet-width-xl: 1920px;
         --theme-sheet-width-lg: 940px;
         --theme-sheet-width-md: 720px;
         --theme-sheet-width-sm: 540px;
@@ -46966,6 +46966,15 @@ a.u-link.u-text-hover-color-var:hover {
   }
 }
 
+ /*begin-variables custom-site-css*/
+a, button, [data-href], .u-carousel-control, .u-gallery-item, .u-video {
+  cursor: url('https://github.com/kyhynngy-oyuur/Tulluk/blob/958164f728ff1856f2a879e387967614edfbd30d/tulluk/cursor2.webp?raw=true') 16 16, pointer !important;
+}
+
+body, * {
+  cursor: url('https://github.com/kyhynngy-oyuur/Tulluk/blob/958164f728ff1856f2a879e387967614edfbd30d/tulluk/cursor1.webp?raw=true') 16 16, auto !important;
+}
+/*end-variables custom-site-css*/
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/

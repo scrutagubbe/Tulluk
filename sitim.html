@@ -10,6 +10,7 @@
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 8.3.6, nicepage.com">
+    <link rel="icon" href="images/favicon.jpg">
     
     
     
@@ -23,20 +24,151 @@
     <meta property="og:title" content="sitim">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <script>document.addEventListener('mousemove', e => {
+  const cursor = document.getElementById('custom-cursor');
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mousedown', () => {
+  const cursor = document.getElementById('custom-cursor');
+  cursor.style.backgroundImage = "url('cursor-active.png')";
+});
+
+document.addEventListener('mouseup', () => {
+  const cursor = document.getElementById('custom-cursor');
+  cursor.style.backgroundImage = "url('cursor.png')";
+});</script><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-xl-mode" data-lang="ru">
-    <section class="u-clearfix u-section-1" id="block-1">
+    <section class="u-clearfix u-image u-section-1" id="block-1" data-image-width="2162" data-image-height="1434">
       
-      <img class="u-absolute-hcenter u-expanded u-image u-image-1" src="images/image-b61f77cc-d7a8-45fa-b13d-60091efc7bd7.webp" data-image-width="2162" data-image-height="1434">
-      <img class="infinite u-image u-image-contain u-image-default u-image-2" src="images/image-b14b38b3-f48c-4a96-bf5f-d41c7049c04b.webp" alt="" data-image-width="413" data-image-height="475" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" data-href="https://www.instagram.com/uruhuj/" data-target="_blank">
-      <img class="infinite u-image u-image-contain u-image-default u-image-3" src="images/image-2e4f70ad-1419-42cb-86f5-06670ce4edc6.webp" alt="" data-image-width="234" data-image-height="493" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" data-href="mailto:tulluk@tuta.io?subject=alamaj!">
-      <img class="infinite u-image u-image-contain u-image-default u-image-4" src="images/image-2cb5bc0a-d19c-45d3-9a30-f1435292ec22.webp" alt="" data-image-width="194" data-image-height="261" data-href="t.me/uruhuj" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
-      <img class="u-hover-feature u-image u-image-contain u-image-default u-image-5" src="images/image-ee01f1f6-dc06-402a-bc4e-86352a1aadcc.webp" alt="" data-image-width="290" data-image-height="206" data-href="./" data-page-id="72064215" title="alamaj">
+      <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
+        <div id="container"></div>
+        <style> body {
+    margin: 0;
+    overflow: hidden;
+    background-color: transparent;
+ 
+  }
+  #container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .falling-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  
+  }
+  .falling-image.grabbing { </style>
+        <script> const container = document.getElementById('container');
+  const imageUrls = [
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-aa612c0b-0892-465f-8e5c-589e87bfcaaa.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-5af99bbe-999d-4c96-b8a6-ee0d96e3a2d0.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-ffc7c3e1-95a4-4c77-9a9e-896eb008befd.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-4969729a-5c2b-4b0d-92b0-07f81f6c8a18.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-2d6e7b0b-c819-4424-bc3c-eb6434add568.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-e41d324c-aa5f-404a-a2b5-7ef12226db5e.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-3c893e86-4e28-4c0a-99aa-c24e33186b19.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-001961fb-a7bd-4e8d-9c0d-7693e7e2d5aa.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-1ca02d64-af87-4523-b24d-8d389ee8c126.png',
+    'https://i-p.rmcdn.net/676ad8316154d57dbb7c788d/5185204/image-6cd76fd8-987d-4d39-852e-2b30004c7163.png',
+  ];
+  const maxImages = 10;
+  let currentImages = 0;
+  const fallingImages = [];
+  const usedIndexes = new Set();
+  function getRandomImage() {
+    if (usedIndexes.size >= imageUrls.length) {
+      usedIndexes.clear();
+    }
+    let index;
+    do {
+      index = Math.floor(Math.random() * imageUrls.length);
+    } while (usedIndexes.has(index));
+    usedIndexes.add(index);
+    return imageUrls[index];
+  }
+  function createFallingImage() {
+    if (currentImages >= maxImages) return;
+    const img = document.createElement('img');
+    img.src = getRandomImage();
+    img.classList.add('falling-image');
+    img.style.left = Math.random() * window.innerWidth + 'px';
+    img.style.top = '-100px';
+    let velocityY = Math.random() * 3 + 1;
+    img.addEventListener('mousedown', (event) => {
+      event.preventDefault();
+      img.classList.add('grabbing');
+      let offsetX = event.clientX - img.offsetLeft;
+      let offsetY = event.clientY - img.offsetTop;
+      function onMouseMove(e) {
+        img.style.left = e.clientX - offsetX + 'px';
+        img.style.top = e.clientY - offsetY + 'px';
+        velocityY = 0;
+      }
+      function onMouseUp() {
+        img.classList.remove('grabbing');
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+      }
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+    });
+    container.appendChild(img);
+    fallingImages.push({ img, velocityY });
+    currentImages++;
+    function fall() {
+      const rect = img.getBoundingClientRect();
+      let onGround = false;
+      fallingImages.forEach((other) => {
+        if (other.img !== img) {
+          const otherRect = other.img.getBoundingClientRect();
+          if (
+            rect.left < otherRect.right &&
+            rect.right > otherRect.left &&
+            rect.bottom > otherRect.top &&
+            rect.top < otherRect.bottom
+          ) {
+            if (rect.bottom <= otherRect.top + 5) {
+              velocityY = 0;
+              img.style.top = otherRect.top - rect.height + 'px';
+              onGround = true;
+            }
+          }
+        }
+      });
+      if (!onGround && rect.top + rect.height < window.innerHeight) {
+        img.style.top = rect.top + velocityY + 'px';
+        velocityY += 0.1;
+      } else if (rect.top + rect.height >= window.innerHeight) {
+        velocityY = 0;
+        img.style.top = window.innerHeight - rect.height + 'px';
+        onGround = true;
+      }
+      if (rect.top > window.innerHeight + 200) {
+        img.remove();
+        const index = fallingImages.findIndex((obj) => obj.img === img);
+        if (index > -1) fallingImages.splice(index, 1);
+        currentImages--;
+        return;
+      }
+      requestAnimationFrame(fall);
+    }
+    fall();
+  }
+  setInterval(createFallingImage, 1000); </script>
+      </div>
+      <img class="infinite u-image u-image-contain u-image-default u-image-1" src="images/image-b14b38b3-f48c-4a96-bf5f-d41c7049c04b.webp" alt="" data-image-width="413" data-image-height="475" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" data-href="https://www.instagram.com/uruhuj/" data-target="_blank">
+      <img class="infinite u-image u-image-contain u-image-default u-image-2" src="images/image-2e4f70ad-1419-42cb-86f5-06670ce4edc6.webp" alt="" data-image-width="234" data-image-height="493" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" data-href="mailto:tulluk@tuta.io?subject=alamaj!">
+      <img class="infinite u-image u-image-contain u-image-default u-image-3" src="images/image-2cb5bc0a-d19c-45d3-9a30-f1435292ec22.webp" alt="" data-image-width="194" data-image-height="261" data-href="t.me/uruhuj" data-animation-name="customAnimationIn" data-animation-duration="4000" data-animation-delay="0" data-animation-direction="" data-animation-out="0">
+      <img class="u-hover-feature u-image u-image-contain u-image-default u-image-4" src="images/image-ee01f1f6-dc06-402a-bc4e-86352a1aadcc.webp" alt="" data-image-width="290" data-image-height="206" data-href="./" data-page-id="72064215" title="alamaj">
     </section>
     
     
     
     
-    <section class="u-backlink u-clearfix u-grey-80"></section>
   
 </body></html>
