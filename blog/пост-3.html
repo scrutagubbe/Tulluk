@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../Post-Template.css" media="screen">
     <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 8.3.6, nicepage.com">
+    <meta name="generator" content="Nicepage 8.4.0, nicepage.com">
     <link rel="icon" href="../images/favicon.jpg">
     
     
@@ -21,7 +21,14 @@
 		"name": "tulluk"
 }</script>
     <meta name="theme-color" content="#478ac9">
-  <script>document.addEventListener('mousemove', e => {
+  <script>document.addEventListener("DOMContentLoaded", function(){
+	$('.preloader-background').delay(1700).fadeOut('slow');
+	
+	$('.preloader-wrapper')
+		.delay(1700)
+		.fadeOut();
+});</script>
+<script>document.addEventListener('mousemove', e => {
   const cursor = document.getElementById('custom-cursor');
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';

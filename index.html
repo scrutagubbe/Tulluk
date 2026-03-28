@@ -9,14 +9,7 @@
 <link rel="stylesheet" href="index.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 8.3.6, nicepage.com">
-    <script>document.addEventListener("DOMContentLoaded", function(){
-	$('.preloader-background').delay(1700).fadeOut('slow');
-	
-	$('.preloader-wrapper')
-		.delay(1700)
-		.fadeOut();
-});</script>
+    <meta name="generator" content="Nicepage 8.4.0, nicepage.com">
     <script> function waitForJQueryAndRipples() {
     if (typeof $ === 'function' && $('.full-landing-image').length) {
         // Подключаем ripples.js динамически
@@ -50,7 +43,14 @@ window.addEventListener('pageshow', waitForJQueryAndRipples); </script>
     <meta property="og:title" content="alamaj">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-  <script>document.addEventListener('mousemove', e => {
+  <script>document.addEventListener("DOMContentLoaded", function(){
+	$('.preloader-background').delay(1700).fadeOut('slow');
+	
+	$('.preloader-wrapper')
+		.delay(1700)
+		.fadeOut();
+});</script>
+<script>document.addEventListener('mousemove', e => {
   const cursor = document.getElementById('custom-cursor');
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';

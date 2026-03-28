@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="sitim.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 8.3.6, nicepage.com">
+    <meta name="generator" content="Nicepage 8.4.0, nicepage.com">
     <link rel="icon" href="images/favicon.jpg">
     
     
@@ -24,7 +24,14 @@
     <meta property="og:title" content="sitim">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-  <script>document.addEventListener('mousemove', e => {
+  <script>document.addEventListener("DOMContentLoaded", function(){
+	$('.preloader-background').delay(1700).fadeOut('slow');
+	
+	$('.preloader-wrapper')
+		.delay(1700)
+		.fadeOut();
+});</script>
+<script>document.addEventListener('mousemove', e => {
   const cursor = document.getElementById('custom-cursor');
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';
@@ -165,6 +172,26 @@ document.addEventListener('mouseup', () => {
       <img class="infinite u-image u-image-contain u-image-default u-image-2" src="images/image-2e4f70ad-1419-42cb-86f5-06670ce4edc6.webp" alt="" data-image-width="234" data-image-height="493" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" data-href="mailto:tulluk@tuta.io?subject=alamaj!">
       <img class="infinite u-image u-image-contain u-image-default u-image-3" src="images/image-2cb5bc0a-d19c-45d3-9a30-f1435292ec22.webp" alt="" data-image-width="194" data-image-height="261" data-href="https://t.me/uruhuj" data-animation-name="customAnimationIn" data-animation-duration="4000" data-animation-delay="0" data-animation-direction="" data-animation-out="0" data-target="_blank">
       <img class="u-hover-feature u-image u-image-contain u-image-default u-image-4" src="images/image-ee01f1f6-dc06-402a-bc4e-86352a1aadcc.webp" alt="" data-image-width="290" data-image-height="206" data-href="./" data-page-id="72064215" title="alamaj">
+      <div class="custom-expanded u-clearfix u-custom-html u-custom-html-2">
+        <div class="preloader-background">
+          <div class="active big preloader-wrapper">
+            <div class="spinner-blue-only spinner-layer">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <h1></h1>
+        </div>
+      </div>
     </section>
     
     
